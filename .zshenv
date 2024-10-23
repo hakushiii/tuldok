@@ -1,0 +1,1 @@
+export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
