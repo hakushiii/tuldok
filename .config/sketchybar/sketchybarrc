@@ -91,7 +91,8 @@ sketchybar -m --add item clock_logo right\
                                background.color=0xff5E81AC \
                                background.height=40 \
                                background.padding_left=5  \
-                               padding=10
+                               icon.padding_left=10   \
+                               
 
 sketchybar --add item  ip_address right                              \
            --set       ip_address script="$PLUGIN_DIR/ip_address.sh" \
@@ -101,7 +102,6 @@ sketchybar --add item  ip_address right                              \
                                   background.border_width=0          \
                                   background.height=40               \
                                   icon.padding_left=10                \
-                                  label.padding_right=10              \
            --subscribe ip_address wifi_change                        
 
 sketchybar --add item  volume right                                  \
