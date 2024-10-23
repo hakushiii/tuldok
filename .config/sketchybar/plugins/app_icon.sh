@@ -3,7 +3,7 @@
 source "$HOME/.config/sketchybar/icons.sh"
 
 case "$1" in
-"Terminal" | "Warp" | "iTerm2")
+"Terminal" | "Warp" | "iTerm2" | "kitty" )
   RESULT=$ICON_TERM
 	if grep -q "btop" <<< $2;
   then

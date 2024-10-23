@@ -6,13 +6,13 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 sketchybar -m --bar height=56 \
                     blur_radius=0 \
                     position=top \
-                    padding_left=5 \
-                    padding_right=5 \
+                    padding_left=0 \
+                    padding_right=0 \
                     margin=0 \
                     corner_radius=0 \
                     color=0xff000000 \
                     border_width=0 \
-
+                    # display=main
 
 ############## GLOBAL DEFAULTS ##############
 sketchybar -m --default updates=when_shown \
@@ -90,15 +90,13 @@ sketchybar -m --add item clock_logo right\
               --set clock_logo icon=$ICON_CALENDAR \
                                background.color=0xff5E81AC \
                                background.height=40 \
-                               background.padding_left=5  \
+                               padding_left=0  \
                                icon.padding_left=10   \
                                
 
 sketchybar --add item  ip_address right                              \
            --set       ip_address script="$PLUGIN_DIR/ip_address.sh" \
                                   update_freq=30                     \
-                                  padding_left=2                     \
-                                  padding_right=8                    \
                                   background.border_width=0          \
                                   background.height=40               \
                                   icon.padding_left=10                \
@@ -106,9 +104,7 @@ sketchybar --add item  ip_address right                              \
 
 sketchybar --add item  volume right                                  \
            --set       volume script="$PLUGIN_DIR/volume.sh"         \
-                              padding_left=10                         \
-                              padding_right=10                        \
-                              background.border_width=0              \
+                              background.border_width=0             \
                               background.height=40                   \
            --subscribe volume volume_change                          
 

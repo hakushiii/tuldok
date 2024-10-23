@@ -26,7 +26,7 @@ case $VOLUME in
 *)
 	ICON=${ICONS_VOLUME[0]}
 	LABEL=""
-	BGCOLOR=0xffff0000
+	BGCOLOR=0xff3B4252
 	COLOR=0xffffffff
 	;;
 esac
