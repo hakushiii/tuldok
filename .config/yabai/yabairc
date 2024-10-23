@@ -1,0 +1,37 @@
+yabai -m config                         \
+        layout bsp                      \
+        window_placement second_child   
+
+## padding
+
+yabai -m config                         \
+        top_padding 10                  \
+        bottom_padding 10               \
+        left_padding 10                 \
+        right_padding 10                \
+        window_gap 6        
+
+# yabai -m config external_bar all:60:0
+
+## mouse settings
+
+yabai -m config                         \
+        mouse_modifier alt              \
+        mouse_action1 move            \
+        mouse_action2 resize            \
+        mouse_drop_action swap
+
+### disable
+
+yabai -m rule --add app=".*" manage=off
+yabai -m rule --add app="^Arc$" manage=on
+yabai -m rule --add app="^Spotify$" manage=on
+yabai -m rule --add app="^Discord$" manage=on
+yabai -m rule --add app="^Safari$" manage=on
+yabai -m rule --add app="^Code$" manage=on
+yabai -m rule --add app="^kitty$" manage=on
+
+## sketchybar
+
+yabai -m signal --add event=window_created action="sketchybar -m --trigger front_app_switched &> /dev/null"
+yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger front_app_switched &> /dev/null"

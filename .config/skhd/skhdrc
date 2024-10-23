@@ -1,0 +1,41 @@
+# Change Focus
+alt - k : yabai -m window --focus south
+alt - i : yabai -m window --focus north
+alt - j : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+# Change Dispaly Focus
+alt - a: yabai -m display --focus west
+alt - d: yabai -m display --focus east
+
+# Toggle Float
+shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Maximize Window
+shift + alt - g : yabai -m window --toggle zoom-fullscreen
+
+# Balance Windows
+shift + alt - e : yabai -m space --balance
+
+# Swap Windows
+shift + alt - k : yabai -m window --swap south
+shift + alt - i : yabai -m window --swap north
+shift + alt - j : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
+
+# Move and Split Windows
+ctrl + alt - k : yabai -m window --warp south
+ctrl + alt - i : yabai -m window --warp north
+ctrl + alt - j : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+# Transfer Windows to Space
+shift + alt - 1 : yabai -m window --space 1;
+shift + alt - 2 : yabai -m window --space 2;
+shift + alt - 3 : yabai -m window --space 3;
+shift + alt - 4 : yabai -m window --space 4;
+
+# Yabai Service
+ctrl + alt - z : yabai --stop-service
+ctrl + alt - x : yabai --start-service
+ctrl + alt - c : yabai --restart-service
